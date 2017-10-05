@@ -119,14 +119,125 @@ int main(void)
 int m(int v[n])
 {
   int i=0,a;
-  for(i=0;i<=n/2;i++)
+  for(i=0;i<=n/2;i++){
     a=v[i];
     v[i]=v[n-1-i];
     v[n-1-i]=a;
   }
-  return v[];
+  return v[n];
 }
 int main(void)
 {
   int v[n];
-  printf("数组的倒序排列
+  printf("数组的倒序排列为%d",v[n]);
+  return 0;
+}
+6-10
+#include <stdio.h>
+void a(int v1[],const int v2[n],int a)
+{
+  int i=0;
+  for(i=0;i<n;i++)
+    v1[i]=v2[i];
+  for(i=0;i<=n/2;i++){
+    a=v1[i];
+    v1[i]=v1[n-1-i];
+    v1[n-1-i]=a;
+  }
+}
+int main(void)
+{
+  a(int v1[],const int v2[n],int a)
+  return 0;
+}
+6-11
+#include <stdio.h>
+int a(const int v[],int id[],int key,int n)
+{
+  int i,j=0;
+  for(i=0;i<n;i++){
+    if(v[i]==key){
+      id[j]=i;
+      j++;
+    }
+  } 
+  return j;
+}
+int main(void)
+{
+  int m;
+  m=a(const int v[],int id[],int key,int n);
+  printf("有%d个值相等",m);
+  return 0;
+}
+6-12(?????????????????????????????????????????????????????????)
+
+6-13
+#include <stdio.h>
+......
+int fen[2][4][3];
+int i=0,j=0,m=0;
+for(i=0;i<2;i++){
+  for(j=0;j<4;j++){
+    for(m=0;m<3;m++){
+      fen[0][j][m]=tensu1[j][m];
+      fen[1][j][m]=tensu2[j][m];
+    }
+  }
+}
+6-14
+#include <stdio.h>
+int main(void)
+{
+  double a,b,,c,d;
+  printf("%f\n",a);
+  printf("%f\n",b);
+  printf("%f\n",c);
+  printf("%f\n",d);
+  return 0;
+}
+6-15(??????????????????????????????????????????????????????)
+#include <stdio.h>
+void put(int i)
+{
+  i=0;
+  i++;
+  printf("第%d次",i);
+}
+int main(void)
+{
+  static int i;
+  put(i);
+  return 0;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
