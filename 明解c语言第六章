@@ -202,7 +202,7 @@ void put(int i)
 {
   i=0;
   i++;
-  printf("第%d次",i);
+  
 }
 int main(void)
 {
