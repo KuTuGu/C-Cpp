@@ -20,7 +20,7 @@ int main(){
             	case 11:        n=31*6+30*3+28+a[j][b2];    break;
             	case 12:        n=31*6+30*4+28+a[j][b2];    break;
         	}
-        	if(a[j][b0]/4==0)
+        	if(a[j][b0]/400==0)||(a[j][b0]%100!=0 && a[j][b0]%4==0 )
             	n++;
     	}
    	 	else if(a[j][b1]==1)
