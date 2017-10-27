@@ -2,9 +2,7 @@
 int main(){
     int n=0,i,j,b0=0,b1=1,b2=2,a[10][3];
     for(i=0;;i++){
-        scanf("%d",&a[i][b0]); scanf("/");
-        scanf("%d",&a[i][b1]); scanf("/");
-        scanf("%d",&a[i][b2]); scanf("\n");
+        scanf("%d/%d/%d\n",&a[i][b0],&a[i][b1],&a[i][b2]); 
     }
     for(j=0;j<=i;j++){
     	if(a[j][b1]>2){
