@@ -1,12 +1,13 @@
+//运行正确
 #include <stdio.h>
-#include <math.h>
 int main()
 {
-    int M,N,i=0,A[10000]={0},a,j,b=1,c=0,d=0;
+    int M,N,i=0,A[10000]={0},a,j,b,c=1,d=0;
     scanf("%d %d",&M,&N);
-    for(a=2;A[9999]==0;a++){
-        for(j=1;j<=sqrt(a);j++){
-            if(a%j==0&&j!=1){
+    for(a=2;A[N]==0;a++){ 
+        b=0;
+        for(j=2;j<=a/2;j++){
+            if(a%j==0){
                 b++;
                 break;
             }
