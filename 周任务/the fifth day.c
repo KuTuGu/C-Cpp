@@ -1,19 +1,22 @@
 #include <stdio.h>
 int main()
 {
-        int x,y,a[20][5],i=0,j=0;
-	for(x=1;x<=100;x++){
-		for(y=1;y<=x/2;y++){
-			if(y!=1&&x%y==0)
-				continue;
+    int x,y,i=1,b;
+	for(x=2;x<=100;x++){
+        b=0;//很重要，b在一次循环判断完后要初始化为0，否则影响下一次判断。
+		for(y=2;y<=x/2;y++){
+			if(x%y==0){
+				b++;
+                break;
+            }
 		}
-		a[i][j]=x;
-		j++;
-		if(j==4){
-			i++;
-			j=0;
-		}
-	}	
-	printf("1到100之间的素数有:%d",a[i][j]);
+        if(b==0){//注意==
+            if(i%5!=0)
+		        printf("%d ",x);
+            else if(i%5==0)
+                printf("%d\n",x);
+		    i++;
+        }
+    }
 	return 0;
 }
