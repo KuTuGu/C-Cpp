@@ -1,3 +1,4 @@
+//运行正确
 #include <stdio.h>
 int Plus(int x,int y,int a,int b,int A[10][1000]);
 int main()
