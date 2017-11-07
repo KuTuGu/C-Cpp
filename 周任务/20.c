@@ -1,3 +1,4 @@
+//运行正确
 #include <stdio.h>
 #include <math.h>
 double plus(int n);
