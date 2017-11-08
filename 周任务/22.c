@@ -1,3 +1,4 @@
+//运行正确
 #include <stdio.h>
 #include <stdlib.h>
 int main()
