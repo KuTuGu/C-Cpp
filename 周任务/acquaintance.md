@@ -10,20 +10,20 @@ int main()
         printf("%d\n",s[i]);  
         i++;  
     }  
+    return 0;    
+>}    
+### 代码2:  
+>#include <stdio.h>  
+int main()  
+{  
+    int i;  
+    char a;  
+    do{  
+        a=getchar();  
+        printf("%d\n",a);  
+    }while(a!='0');//这里只有这个可以使用而a!(a!='\0‘）不能使用（因为a不是字符串没有'\0'结尾）  
     return 0;  
 >}  
-### 代码2:
->#include <stdio.h>
-int main()
-{
-    int i;
-    char a;
-    do{
-        a=getchar();
-        printf("%d\n",a);
-    }while(a!='0');//这里只有这个可以使用而a!(a!='\0‘）不能使用（因为a不是字符串没有'\0'结尾）
-    return 0;
->}
 
 
 
