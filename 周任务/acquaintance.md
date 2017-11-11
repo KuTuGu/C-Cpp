@@ -37,24 +37,22 @@ int main()
 (int)'\0'=0;  
 (int)'0'=48; 
 ## 报错
-### 1.
->#include <stdio.h>
-int main()
-{   
-    int i;
-    char A[5];
-    for(i=0;i<5;i++){
-        printf("%d",A[i]);
-        if(A[i]='\0')
-            A[i]='0';
-         printf("%d",A[i]);
-    }
-    return 0;
->}
-输入：  
-12345
-输出：  
-10000000000
+### 1.  
+>#include <stdio.h>  
+int main()  
+{     
+    int i;  
+    char A[5];   
+    for(i=0;i<5;i++){   
+        printf("%d",A[i]);  
+        if(A[i]='\0')  
+            A[i]='0';  
+         printf("%d",A[i]);  
+    }  
+    return 0;  
+>}  
+输入：12345    
+输出：10000000000  
 
 
 
