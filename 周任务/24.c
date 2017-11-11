@@ -1,4 +1,4 @@
-//时间超出
+//仅当最后输入换行时正确
 #include <stdio.h>
 int main()
 {
@@ -22,5 +22,6 @@ int main()
         else{
             printf("%s",B[sum%10]);
         }
+    }
     return 0;
 }
