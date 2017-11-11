@@ -9,10 +9,18 @@ int main()
     while((a=getchar())!='\n'){
         sum+=a-48;
     }
-    if(sum / 100)                          
+    if(sum / 100!=0){                          
         printf("%s",B[sum/100]);
-    if(sum/10%10)
         printf("%s",B[sum/10%10]);
-    printf("%s",B[sum%10]);         
+        printf("%s",B[sum%10]); 
+    }
+    else{
+        if(sum/10%10!=0){
+            printf("%s",B[sum/10%10]);
+            printf("%s",B[sum%10]);
+        }
+        else{
+            printf("%s",B[sum%10]);
+        }
     return 0;
 }
