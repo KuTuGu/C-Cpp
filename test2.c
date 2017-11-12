@@ -1,3 +1,4 @@
+//运行正确
 #include <stdio.h>
 void arr(char A[100]);//倒置数组元素
 int main()
