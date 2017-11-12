@@ -33,6 +33,27 @@ int main()
 ### char \*A[3];
 1.char \*A[3]={"abc","bca","cba"};//初始化时，可储存多个字符串  
 2.printf("%s",A[number]);//既然是字符串输出单个元素时，也要用%s
+## 强制转换  
+(int)'\0'=0;  
+(int)'0'=48; 
+## 报错
+### 1.  
+>#include <stdio.h>  
+int main()  
+{     
+    int i;  
+    char A[5];   
+    for(i=0;i<5;i++){   
+        printf("%d",A[i]);  
+        if(A[i]='\0')  
+            A[i]='0';  
+         printf("%d",A[i]);  
+    }  
+    return 0;  
+>}  
+输入：12345    
+输出：10000000000  
+
 
 
 
