@@ -1,4 +1,4 @@
-//编译错误。。。
+//运行正确
 #include<stdio.h>
 #include<ctype.h>
 #include<string.h>
