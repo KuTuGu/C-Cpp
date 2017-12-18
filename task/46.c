@@ -1,4 +1,4 @@
-//emmmm，多种错误😂
+//编译错误，可是终端明明可以运行
 #include<stdio.h>
 int main()
 {

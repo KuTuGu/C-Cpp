@@ -1,24 +1,21 @@
-//最后一个测试点
+//运行正确
 #include<stdio.h>
 int main()
 {
-    int N,i,max=0,j,I;
-    int A[100000][2]={0},B[100000][2]={0};
+    int N,i,max=0,j,m;
+    int A[100000]={0},B[100000]={0};
     scanf("%d",&N);
     for(i=0;i<N;i++){
-        scanf("%d%d",&A[i][0],&A[i][1]);
-        B[i][0]=i+1;
+      	scanf("%d",&m);
+        scanf("%d",&A[m]);
+        B[m]+=A[m];
     }
-    for(i=0;i<N;i++){
-        for(I=0;I<N;I++){
-            if(A[i][0]==B[I][0])
-                B[I][1]+=A[i][1];
-            if(B[I][1]>max){
-                max=B[I][1];
-                j=I;
-            }
+    for(i=0;i<=N;i++){ //可能取到N
+      	if(B[i]>max){
+            max=B[i];
+            j=i;
         }
     }
-    printf("%d %d",B[j][0],max);
+    printf("%d %d",j,max);
     return 0;
 }

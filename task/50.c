@@ -33,7 +33,7 @@ int main()
     if(num==0)
         printf("Not Exist");
     else if(num==1)
-        printf("\(%d, %d\): %d",b,a,A[a][b]);
+        printf("(%d, %d): %d",b,a,A[a][b]);
     else 
         printf("Not Unique");
     return 0;
