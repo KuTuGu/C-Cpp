@@ -1,20 +1,19 @@
-//二，三测试点
+//第三测试点
 #include <stdio.h>
 int main()
 {
     int N,i,j,D;
     float sum=0.0,max=0.0;
-    int A[1000]={0},B[1000]={0};
-    float C[1000]={0.0};
+    float A[1000]={0.0},B[1000]={0.0},C[1000]={0.0};
     scanf("%d%d",&N,&D);
     for(i=0;i<N;i++){
-        scanf("%d",&A[i]);
+        scanf("%f",&A[i]);
     }
     for(i=0;i<N;i++){
-        scanf("%d",&B[i]);
+        scanf("%f",&B[i]);
     }
     for(i=0;i<N;i++){
-        C[i]=B[i]/(float)A[i];
+        C[i]=B[i]/A[i];
     }
     while(D){
         for(i=0;i<N;i++){
