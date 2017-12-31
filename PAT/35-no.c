@@ -2,29 +2,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 void swap(int *a,int i,int j); 
-void Merge(int *a,int n);
+void Merge(int *a,int n,int *b,int *c);
 int compare(int *a,int *b,int k,int *m);
 void store(int *a,int k);
 void print(int *a,int k);
 int main(){
-    int N,i,j,m=0;
-    int *A,*B;
+    int N,i,j,m=0,n=0;
+    int *A,*B,*C;
     scanf("%d",&N);
     A = malloc(sizeof(int) * N);
     B = malloc(sizeof(int) * N);
+    C = malloc(sizeof(int) * N);
     //储存数值
     store(A,N);
     store(B,N);
+    for(i = 0;i < N;i++){
+        C[i] = A[i];
+    }
+    printf("%d\n",compare(A,B,N,&m));
     //进行递归算法的循环判断是否为该算法
     while(compare(A,B,N,&m)){
-        Merge(A,N);
+        Merge(C,N,&n,A);
+            print(A,N);
+            printf("...\n");
     }
-    if(m == 0){//是插入算法
+    printf("%d...\n",m);
+    if(m){//是插入算法
         printf("Insertion Sort\n");
+        Merge(C,N,&n,B);
         print(B,N);
     }
     else{//递归算法
         printf("Merge Sort\n");
+
         print(B,N);
     }
     return 0;
@@ -37,17 +47,19 @@ int compare(int *a,int *b,int k,int *m){
     }
     //判断是否已经排好
     for(i = 0;i < k;i++){
-        if(a[j] > a[j+1])
+        if(a[i] > a[i+1])
             n++;
     }
-    //不相等继续循环
+    //不相等且没有排好继续循环
     if(j != 0 && n != 0){
         return 1;
     }
+    //相等且没有排好退出循环
     else if(j == 0 && n != 0){ 
-        *m = 1;//m判断是循环到最后还是遇到相等数组
+        *m = 1;//m判断是排到最后还是遇到相等
         return 0;
     } 
+    //已经排好，退出循环
     else{
         return 0;
     }
@@ -58,12 +70,21 @@ void store(int *a,int k){
         scanf("%d",&a[i]);
     }
 }
-void Merge(int *a,int n){
-    int j;
+//插入算法
+void Merge(int *a,int n,int *b,int *c){
+    int j,temp,i;
     for(j = 0;j < n;j++){
-        if(a[j] > a[j+1])
-            swap(a,j+1,j);
+        if(a[*b] > a[j]){
+            i = j;
+            break;
+        }
     }
+    //下面有错误，应判断i与*b的位置关系
+    for(j = *b;j < i - 1;j++){
+        c[j] = a[j+1];
+    }
+    c[i - 1] = a[*b];
+    *b = i;
 }
 void swap(int *a,int i,int j){
     int temp;
@@ -73,7 +94,6 @@ void swap(int *a,int i,int j){
 }
 void print(int *a,int k){
     int i;
-    Merge(a,k);
     for(i = 0;i < k-1;i++){
         printf("%d ",a[i]);
     }

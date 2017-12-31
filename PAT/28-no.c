@@ -1,3 +1,4 @@
+//运行错误
 #include <stdio.h>
 #include <stdlib.h>
 void min_max(int *a,int *c,int d);

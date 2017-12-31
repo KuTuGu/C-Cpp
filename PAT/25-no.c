@@ -1,3 +1,4 @@
+//运行错误
 #include <stdio.h>
 typedef struct{
         char adress[5];
