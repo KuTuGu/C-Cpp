@@ -1,20 +1,21 @@
-#include <stdio.h>
-void search(char *a,char b,char *c);//查找字符串中的指定字符,改变字符
+#include<stdio.h>
+#include<string.h>
 int main()
 {
-    int i,j;
-    int sum[2]={0};
-    char A[100001]={'\0'};
-    
-}
-void search(char *a,char b,char *c){
-    int i,j = 0,m = 0;
-    for(i = 0;i < b;i++){
+    int lena,i;
+    long long countt = 0,counta = 0,countp = 0;
+    char a[110000];
+    scanf("%s",a);
+    lena = strlen(a);
+    for(i = lena - 1; i >= 0; i--){
+        if(a[i] == 'T')
+            countt++;
+        if(a[i] == 'A')
+            counta += countt;
         if(a[i] == 'P')
-            j++;
-        if(j > 0){
-            c[m] = a[i];
-            m++;
-        }
+            countp += counta;
     }
+    countp %= 1000000007;
+    printf("%d",countp);
+    return 0;
 }

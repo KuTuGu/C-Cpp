@@ -1,26 +1,27 @@
-//运行超时
+/*有四个测试点应该是这种情况，感觉题目有漏洞：
+输入：3 3 4 5
+输出应该是：2
+*/
 #include <stdio.h>
 int main()
 {
-    int N,i,max = 0,m = 0;
+    int N,M,i,m = 0;
     int A[100000] = {0};
     scanf("%d",&N);
+    M = N + 1;
     for(i = 0;i < N;i++){
         scanf("%d",&A[i]);
     }
-    do{
+    while((m < M) && (M > 0)){
+        M--;
+        m = 0;
         for(i = 0;i < N;i++){
-            if(A[i] == max){
-                A[i] = 0;
+            if(A[i] > M){
                 m++;
             }
         }
-        max = 0;
-        for(i = 0;i < N;i++){
-            if(A[i] > max){
-                max = A[i];
-            }
-        }
-    }while(m != max);
-    printf("%d",max);
+        printf("%d ...%d\n",m,M);
+    }
+    printf("%d",M);
+    return 0;
 }

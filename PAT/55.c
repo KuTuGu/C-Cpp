@@ -1,31 +1,38 @@
 #include <stdio.h>
-typedef struct a{
-    int A;
-    char B[9]; 
+#include <stdlib.h>
+#include <string.h>
+typedef struct{
+    char name[9];
+    int height;
 }Student;
+int cmp(const void *a, const void *b);//降序排序
+void printrow(Student s[], int num);
 int main()
 {
-    int N,K,i,j,m,min,min_i;
-    int C[10000];
-    scanf("%d %d",&N,&K);
-    m = N / K;//计算行数
-    Student a[N];
-    for(i = 0;i < N;i++){//储存
-        scanf("%s %d",a[i].B,&a[i].A);
+    int N,K;
+    Student students[10000],*p = students;
+    scanf("%d%d",&N,&K);
+    for(int i = 0;i < N;i++){
+        scanf("%s%d",students[i].name,&students[i].height);
     }
-    do{//排序(小到大)
-        min = 301;
-        for(i = 0；i < N;i++){//查找最小值
-            if(a[i].A < min && a[i].A >= 30){
-                min = a[i].A;
-                min_i = i;
-            }
-        }
-        C[j] = min_i;
-        j++;
-        a[min_i].A = 0;
-    }while(j != N);
-    //......不会了
+    qsort(p,N,sizeof(Student),cmp);
+    printrow(students,N - N / K * (K - 1));
+    for(p += N - N / K * (K - 1); p < students + N; p += N / K)
+        printrow(p,N / K);
     return 0;
 }
-
+void printrow(Student *s, int num)
+{
+    for(int i = num / 2 * 2 - 1; i > 0; i -= 2)     /* on the left */
+        printf("%s ", s[i].name);
+    for(int i = 0; i < num; i += 2)                 /* on the right */
+        printf("%s%c", s[i].name, i + 2 < num ? ' ' : '\n');
+}
+int cmp(const void *a, const void *b)
+{
+    Student s1 = *(Student*)a;
+    Student s2 = *(Student*)b;
+    if(s1.height != s2.height)
+        return s2.height - s1.height;
+    return strcmp(s1.name, s2.name);
+}

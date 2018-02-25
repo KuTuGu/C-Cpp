@@ -1,4 +1,4 @@
-//错误点：二维数组作为形参的传递   int a[b][c]; *(*(a + b) + c) = 6879;正确
+//注意二维数组作为形参的传递，若长度都未知不妨建立动态二维数组
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -21,7 +21,11 @@ int main()
     }
     p = N / m;
     q = m;
-    //int B[p][q];
+    //动态二维数组
+    B = malloc(sizeof(int *) * p);//指针数组
+    for(i = 0; i < p;i++){//分配每个指针所指向的数组
+        B[i] = malloc(sizeof(int) * q);     
+    }  
     int c = p > q ? (p + 1) / 2 : (q + 1) / 2;
     for (i = 0; i < c; ++i, p -= 2, q -= 2) {
         for (col = i; col < i + q; ++col) 
@@ -55,7 +59,6 @@ void set(int **a,int b,int c,int *d,int n){
             j = i;
         }
     }
-    *(*(a + b) + c) = d[j];
-    printf("%d ",*(*(a + b) + c));
+    a[b][c] = d[j];
     d[j] = 0;
 }
