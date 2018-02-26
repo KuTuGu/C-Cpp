@@ -1,4 +1,4 @@
-//格式错误。。。是什么鬼。。。
+//运行正确
 #include<stdio.h>
 int main()
 {
@@ -11,16 +11,16 @@ int main()
             break;
         }
         else if(t>T){
-            printf("Not enough tokens. Total = %d.\n",T);
+            printf("Not enough tokens.  Total = %d.\n",T);
             continue;
         }
         if((n2>n1&&b==1)||(n2<n1&&b==0)){
             T+=t;
-            printf("Win %d! Total = %d.\n",t,T);
+            printf("Win %d!  Total = %d.\n",t,T);
         }
         if((n2>n1&&b==0)||(n2<n1&&b==1)){
             T-=t;
-            printf("Lose %d. Total = %d.\n",t,T);
+            printf("Lose %d.  Total = %d.\n",t,T);
         }
     }
     return 0;

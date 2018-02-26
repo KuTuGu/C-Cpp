@@ -1,3 +1,4 @@
+//部分正确
 #include <stdio.h>
 int main()
 {
