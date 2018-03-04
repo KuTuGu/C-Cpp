@@ -1,21 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-struct Grade{
-    int ID;
-    int C,M,E,A;
-}students[2001];  //学生结构体
-int cmp(const void *a,const void *b);
 int main()
 {
-    int b = 1/2.0 + 0.5;
-    printf("%d",b);
-    int a[6] = {0,2,1,5,4,3},i;
-    qsort(a + 1,5,sizeof(a[1]),cmp);
-    for(i = 0;i < 6;i++){
-        printf("%d  ",a[i]);
+    int N,M,K,i;
+    int link[1000000][2] = {0};
+    scanf("%d%d%d",&N,&M,&K);
+    for(i = 0;i < M;i++){
+        scanf("%d%d",&link[0],&link[1]);
     }
-    return 0;
-}
-int cmp(const void *a,const void *b){
-    return *(int *)a - *(int *)b; 
+    for(i = 0;i < K;i++)[
+        scanf("%d",&city);
+        
+    ]
+
 }
