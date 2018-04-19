@@ -1,5 +1,5 @@
-//测试点3未通过
 //排名如果有并列，应该是1、1、3、4、5，而不是1、1、2、3、4
+//是否四舍五入不影响结果，两种情况都可以
 #include <stdio.h>
 #include <stdlib.h>
 struct Grade{
@@ -20,7 +20,7 @@ int main()
     scanf("%d%d",&N,&M);
     for(i = 1;i <= N;i++){
         scanf("%d%d%d%d",&students[i].ID,&students[i].C,&students[i].M,&students[i].E);
-        students[i].A = (students[i].C + students[i].M + students[i].E) / 3.0 + 0.5;       //平均分四舍五入，不是测试点
+        students[i].A = (students[i].C + students[i].M + students[i].E) / 3;       //平均分四舍五入，不是测试点
         c[i] = students[i].C,m[i] = students[i].M,e[i] = students[i].E,a[i] = students[i].A;
         index[students[i].ID] = i;
     }
@@ -80,3 +80,4 @@ int Order(int a,int b,int c,int d){
     index = (max == d) ? 3 : index;
     return max * 10 + index;
 }
+

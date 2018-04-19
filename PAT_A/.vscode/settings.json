@@ -8,6 +8,10 @@
         "algorithm": "cpp",
         "chrono": "cpp",
         "limits": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "iterator": "cpp",
+        "vector": "cpp"
     }
 }
