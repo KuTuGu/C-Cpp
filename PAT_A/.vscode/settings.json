@@ -12,6 +12,10 @@
         "stdlib.h": "c",
         "stdio.h": "c",
         "iterator": "cpp",
-        "vector": "cpp"
-    }
+        "vector": "cpp",
+        "ostream": "cpp",
+        "iomanip": "cpp",
+        "queue": "cpp"
+    },
+    "git.ignoreLimitWarning": true
 }
