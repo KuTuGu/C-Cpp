@@ -15,7 +15,20 @@
         "vector": "cpp",
         "ostream": "cpp",
         "iomanip": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "__bit_reference": "cpp",
+        "__tree": "cpp",
+        "initializer_list": "cpp",
+        "map": "cpp",
+        "bitset": "cpp",
+        "utility": "cpp",
+        "memory": "cpp",
+        "typeinfo": "cpp",
+        "set": "cpp",
+        "ios": "cpp",
+        "ratio": "cpp"
     },
     "git.ignoreLimitWarning": true
 }

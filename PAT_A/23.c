@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void exchange(char *num,int length);   //数组颠倒位置
-int equal(char *str1,char *str2,int length);   //比较两个数组是否相等
-int cmp(const void *a,const void *b);   //升序排序函数
+
+//数组颠倒位置
+void exchange(char *num,int length);  
+//比较两个数组是否相等
+int equal(char *str1,char *str2,int length); 
+//升序排序函数  
+int cmp(const void *a,const void *b); 
+  
 int main()
 {
     int i,length,carry = 0;
