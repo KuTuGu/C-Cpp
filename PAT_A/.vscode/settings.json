@@ -28,7 +28,15 @@
         "typeinfo": "cpp",
         "set": "cpp",
         "ios": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "cstring": "cpp",
+        "__hash_table": "cpp",
+        "unordered_map": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "__functional_base": "cpp",
+        "atomic": "cpp",
+        "functional": "cpp"
     },
     "git.ignoreLimitWarning": true
 }
